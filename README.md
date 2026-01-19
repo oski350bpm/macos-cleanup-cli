@@ -22,7 +22,7 @@ Zaawansowane narzędzie CLI do analizy, zarządzania i czyszczenia niepotrzebnyc
 
 1. Sklonuj repozytorium:
 ```bash
-git clone https://github.com/TWOJE_USERNAME/macos-cleanup-cli.git
+git clone https://github.com/oski350bpm/macos-cleanup-cli.git
 cd macos-cleanup-cli
 ```
 
