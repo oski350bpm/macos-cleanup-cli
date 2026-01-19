@@ -196,6 +196,7 @@ show_main_menu() {
     echo ""
     echo -e "${GRAY}─────────────────────────────────────────${NC}"
     read -p "Wybierz opcję [0-8]: " choice
+    choice=$(echo "$choice" | tr -d "[:space:]")
     
     case $choice in
         1) run_analysis ;;
@@ -660,9 +661,13 @@ quick_cleanup() {
         echo ""
         echo -e "${GREEN}✓ Czyszczenie zakończone!${NC}"
         echo -e "${GREEN}  Zwolniono około $(format_size $total_size)${NC}"
+    else
+        echo -e "${GRAY}Czyszczenie anulowane.${NC}"
     fi
     
-    read -p "Naciśnij Enter aby kontynuować..."
+    echo ""
+    # Czytaj z terminala, nie z stdin (dla przypadków gdy input jest przekierowany)
+    read -p "Naciśnij Enter aby kontynuować... " dummy < /dev/tty 2>/dev/null || read -p "Naciśnij Enter aby kontynuować... " dummy
 }
 
 # ============================================================
