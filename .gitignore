@@ -1,0 +1,12 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+junk_analysis_*.txt
+junk_analysis_*.csv
+*.tmp
+*.log
+*.swp
+*~
+.vscode/
+.idea/
+*.bak
